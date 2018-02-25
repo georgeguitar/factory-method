@@ -4,10 +4,6 @@
 
 *Autor: Juan Dirceu Navarro Arias*
 
-![Patron Factory Method](https://www.patronesdediseño.com/img/patterns-articles/factory-method-diagram.png)
-
-Fuente: Oscar Javier Blancarte Iturralde, www.patronesdediseño.com
-
 **Factory Method.**
 
 Este patrón de diseño es utilizado cuando es conveniente ocultar la creación de objetos, esto debido a que no se sabe de que tipo son ni en que momento se los creará.
@@ -40,4 +36,8 @@ Para compilar se puede hacerlo desde Eclipse o utilizando el comando javac:
 
 _$ javac FactoryMethod.java_ 
 
+
+![Patron Factory Method](https://www.patronesdediseño.com/img/patterns-articles/factory-method-diagram.png)
+
+Fuente: Oscar Javier Blancarte Iturralde, www.patronesdediseño.com
 
