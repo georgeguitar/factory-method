@@ -1,85 +1,85 @@
-interface LectorDeImagennes {
-    DecodificarImagen getImagenDecodificada();
+interface LectorDeVideos {
+    DecodificarVideo getVideoDecodificado();
 }
 
-class DecodificarImagen {
-    private String imagen;
+class DecodificarVideo {
+    private String video;
 
-    public DecodificarImagen(String imagen) {
-        this.imagen = imagen;
+    public DecodificarVideo(String video) {
+        this.video = video;
     }
 
     @Override
     public String toString() {
-        return "Imagen '" + imagen + "' fue decodificada.";
+        return "Video '" + video + "' fue decodificado.";
     }
 }
 
-class LectorMkv implements LectorDeImagennes {
-    private DecodificarImagen DecodificarImagen;
+class LectorMkv implements LectorDeVideos {
+    private DecodificarVideo DecodificarVideo;
 
-    public LectorMkv(String imagen) {
-        this.DecodificarImagen = new DecodificarImagen(imagen);
+    public LectorMkv(String video) {
+        this.DecodificarVideo = new DecodificarVideo(video);
     }
 
     @Override
-    public DecodificarImagen getImagenDecodificada() {
-        return DecodificarImagen;
+    public DecodificarVideo getVideoDecodificado() {
+        return DecodificarVideo;
     }
 }
 
-class LectorMp4 implements LectorDeImagennes {
-    private DecodificarImagen DecodificarImagen;
+class LectorMp4 implements LectorDeVideos {
+    private DecodificarVideo DecodificarVideo;
 
-    public LectorMp4(String imagen) {
-        DecodificarImagen = new DecodificarImagen(imagen);
+    public LectorMp4(String video) {
+        DecodificarVideo = new DecodificarVideo(video);
     }
 
     @Override
-    public DecodificarImagen getImagenDecodificada() {
-        return DecodificarImagen;
+    public DecodificarVideo getVideoDecodificado() {
+        return DecodificarVideo;
     }
 }
 
-class LectorMov implements LectorDeImagennes {
-    private DecodificarImagen DecodificarImagen;
+class LectorMov implements LectorDeVideos {
+    private DecodificarVideo DecodificarVideo;
 
-    public LectorMov(String imagen) {
-        DecodificarImagen = new DecodificarImagen(imagen);
+    public LectorMov(String video) {
+        DecodificarVideo = new DecodificarVideo(video);
     }
 
     @Override
-    public DecodificarImagen getImagenDecodificada() {
-        return DecodificarImagen;
+    public DecodificarVideo getVideoDecodificado() {
+        return DecodificarVideo;
     }
 }
 
-class ProcesarImagen {
-    private String imagen;
-    private DecodificarImagen DecodificarImagen;
-    private LectorDeImagennes lector = null;
+class ProcesarVideo {
+    private String video;
+    private DecodificarVideo DecodificarVideo;
+    private LectorDeVideos lector = null;
     private String formato;
     
-	public ProcesarImagen(String parametroImagen) {
-		this.imagen = parametroImagen;
+	public ProcesarVideo(String parametroVideo) {
+		this.video = parametroVideo;
 	}
 
-	public DecodificarImagen procesar () {
-	    formato = imagen.substring(imagen.indexOf('.') + 1, imagen.length());
+	public DecodificarVideo procesar () {
+	    formato = video.substring(video.indexOf('.') + 1, video.length());
 	    
 	    if (formato.equals("mkv")) {
-	        lector = new LectorMkv(imagen);
+	        lector = new LectorMkv(video);
 	    } 
 	    if (formato.equals("mp4")) {
-	        lector = new LectorMp4(imagen);
+	        lector = new LectorMp4(video);
 	    }
 	    if (formato.equals("mov")) {
-	        lector = new LectorMov(imagen);
+	        lector = new LectorMov(video);
 	    }
 	    assert lector != null;
-	    DecodificarImagen = lector.getImagenDecodificada();
+	    DecodificarVideo = lector.getVideoDecodificado();
 	    
-	    return DecodificarImagen;
+	    return DecodificarVideo;
 	}
 }
 
@@ -110,8 +110,8 @@ public class FactoryMethod {
         	if (procesarArgumentos.getMensaje() != null) {
         		System.out.println(procesarArgumentos.getMensaje());
         	} else {
-            	ProcesarImagen procesarImagen = new ProcesarImagen(args[0]);
-    	    	System.out.println(procesarImagen.procesar());        		
+            	ProcesarVideo ProcesarVideo = new ProcesarVideo(args[0]);
+    	    	System.out.println(ProcesarVideo.procesar());        		
         	}
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         	System.out.println("No se tiene nada que procesar. "
