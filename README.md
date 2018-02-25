@@ -2,7 +2,12 @@
 
 ## Actividad 3 - Patrones de diseño.
 
-*Autor: Juan Dirceu Navarro Arias*
+*Autor: Juan Dirceu Navarro Arias*  
+
+![Patron Factory Method](https://refactoring.guru/images/patterns/diagrams/factory-method/structure.png)
+
+Fuente: Refactoring Guru, https://refactoring.guru/design-patterns/factory-method
+
 
 **Factory Method.**
 
@@ -35,9 +40,4 @@ El ejemplo está escrito en Java, se utilizó Eclipse Oxygen.2 Release (4.7.2) c
 Para compilar se puede hacerlo desde Eclipse o utilizando el comando javac: 
 
 _$ javac FactoryMethod.java_ 
-
-
-![Patron Factory Method](https://www.patronesdediseño.com/img/patterns-articles/factory-method-diagram.png)
-
-Fuente: Oscar Javier Blancarte Iturralde, www.patronesdediseño.com
 
