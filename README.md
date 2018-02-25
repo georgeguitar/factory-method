@@ -8,11 +8,11 @@
 
 Fuente: Oscar Javier Blancarte Iturralde, www.patronesdediseño.com
 
-###Factory Method.
+**Factory Method.**
 
 Este patrón de diseño es utilizado cuando es conveniente ocultar la creación de objetos, esto debido a que no se sabe de que tipo son ni en que momento se los creará.
 
-###Como usar.
+**Como usar.**
 
 El ejemplo propuesto trata de un decodificador de archivos de video, se reconoce tres tipos de formatos: mkv, mp4, mov.
 
@@ -30,11 +30,11 @@ $ java FactoryMethod atardecer.mp4
 Se obtiene la siguiente respuesta:  
 Video 'atardecer.mp4' fue decodificado.
 
-###Herramientas.
+**Herramientas.**
 
 El ejemplo está escrito en Java, se utilizó Eclipse Oxygen.2 Release (4.7.2) como editor de coódigo fuente, la máquina virtual de Java de Oracle jdk1.8.0_92 y Debian 9 como sistema operativo. 
 
-###Compilar.
+**Compilar.**
 
 Para compilar se puede hacerlo desde Eclipse o utilizando el comando javac: 
 
