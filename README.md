@@ -19,16 +19,16 @@ El ejemplo propuesto trata de un decodificador de archivos de video, se reconoce
 El usuario solo tiene que introducir en nombre del archivo, el programa detecta el tipo de archivo y elige el objeto adecuado para realizar la decodificación.
 
 Ejemplo 1:  
-$ java FactoryMethod atardecer.mkv
+_$ java FactoryMethod atardecer.mkv_
 
 Se obtiene la siguiente respuesta:  
-Video 'atardecer.mkv' fue decodificado.
+_Video 'atardecer.mkv' fue decodificado._
 
 Ejemplo 2:  
-$ java FactoryMethod atardecer.mp4
+_$ java FactoryMethod atardecer.mp4_
 
 Se obtiene la siguiente respuesta:  
-Video 'atardecer.mp4' fue decodificado.
+_Video 'atardecer.mp4' fue decodificado._
 
 **Herramientas.**
 
@@ -38,6 +38,6 @@ El ejemplo está escrito en Java, se utilizó Eclipse Oxygen.2 Release (4.7.2) c
 
 Para compilar se puede hacerlo desde Eclipse o utilizando el comando javac: 
 
-$ javac FactoryMethod.java 
+_$ javac FactoryMethod.java_ 
 
 
